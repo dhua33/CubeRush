@@ -53,11 +53,11 @@ main.prototype = {
 				this.jumpCollide = this.physics.arcade.collide(this.p, this.walls)
 				
 				if(this.p.x > 33600) {
-						this.cp = 33600;
+						this.cp = 33610;
 				} else if(this.p.x > 21936) {
-						this.cp = 21936;
+						this.cp = 21946;
 				} else if(this.p.x > 10576) {
-						this.cp = 10576;
+						this.cp = 10586;
 				}
 				// controls
 				if(this.keys.down.isDown) {
