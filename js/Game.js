@@ -31,6 +31,7 @@ main.prototype = {
 				this.small = false;
 				this.jump = -230;
 				this.jumpval = 250;
+				this.speed = 400;
 				
 				// UI
 				this.UI = this.add.sprite(0, 500, 'UI');
@@ -41,7 +42,7 @@ main.prototype = {
 				this.UI.text.fixedToCamera = true;
 				
 				// audio
-				this.music = this.add.audio('music', 0.4, true);
+				this.music = this.add.audio('music', 0.4, false);
 				this.sound.explode = this.add.audio('explosion', 0.3);
 				this.music.play();
 				
@@ -67,6 +68,7 @@ main.prototype = {
 						this.UI.text.setText("");
 						this.p.x = this.cp;
 						this.p.y = 450;
+						this.speed = 400;
 						this.music.play();
 				} 
 				// dying
@@ -75,6 +77,7 @@ main.prototype = {
 						this.sound.explode.play();
 						this.p.body.velocity.x = 0;
 						this.p.body.velocity.y = 0;
+						this.speed = 0;
 						this.p.visible = false;
 						this.UI.visible = true;
 						this.UI.text.setText("You Lose. Press Down to restart.");
@@ -88,7 +91,7 @@ main.prototype = {
 						} else if(this.jumpBool && this.p.body.velocity.y > this.jump){
 								this.p.body.velocity.y -= this.jumpval;
 						}
-						this.p.body.velocity.x = 400;
+						this.p.body.velocity.x = this.speed;
 				}
 				if(this.p.x > 47850 && this.p.y < 560) {
 						this.music.stop();
