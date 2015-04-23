@@ -10,6 +10,7 @@ preloader.prototype = {
 				this.load.tilemap('map', 'assets/map.json', null, Phaser.Tilemap.TILED_JSON);
 				this.load.image('snowTiles', 'assets/snowTiles.png');
 				this.load.image('UI', 'assets/UI.png');
+				this.load.image('loader', 'assets/loader.png');
 				//sprites
 				this.load.spritesheet('player', 'assets/player.png', 57, 64);
 				//audio

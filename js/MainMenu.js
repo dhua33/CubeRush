@@ -10,6 +10,10 @@ mainmenu.prototype = {
 				space.onDown.add(this.play, this);
 		},
 		play: function() {
+				loader = this.add.sprite(0, 0, 'loader');
+				this.time.events.add(100, this.starter, this);
+		},
+		starter: function() {
 				this.state.start('Game');
 		}
 }
