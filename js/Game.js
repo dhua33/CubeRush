@@ -49,7 +49,7 @@ main.prototype = {
 				this.keys = this.input.keyboard.createCursorKeys();
 		},
 		update: function() {
-				this.deathwall = this.physics.arcade.collide(this.p, this.death);
+				this.deathwall = this.physics.arcade.overlap(this.p, this.death);
 				this.jumpCollide = this.physics.arcade.collide(this.p, this.walls)
 				
 				if(this.p.x > 33600) {
