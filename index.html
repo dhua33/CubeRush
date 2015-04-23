@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jumpin Geometry</title>
+    <script src="js/phaser.min.js"></script>
+    <script src="js/Boot.js"></script>
+    <script src="js/Preloader.js"></script>
+    <script src="js/MainMenu.js"></script>
+    <script src="js/Game.js"></script>
+
+<style>
+body
+{
+    color: #000000;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body bgcolor = "#A6E6FA">
+<script>
+(function() {
+		var game = new Phaser.Game( 800, 600, Phaser.AUTO, 'game');
+    game.state.add('Boot', boot);
+    game.state.add('Preloader', preloader);
+    game.state.add('MainMenu', mainmenu);
+    game.state.add('Game', main);
+    game.state.start('Boot');
+    })();
+</script>
+<div id="game"></div>
+<div id="readme">
+<h2>Cube Rush</h2>
+<ul>
+
+<li><strong>High Concept:</strong>
+Jump over obstacles to the beat.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+Rhythm game with nice music and simple play.
+</li>
+
+<li><strong>Genre:</strong>
+Rhythm action.
+</li>
+
+<li><strong>Game play:</strong>
+Use the up arrow key to jump and the down key to restart. Avoid the red.
+</li>
+
+<li><strong>Prototype goal:</strong>
+Make a rhythm based game using tilemaps.
+</li>
+
+<li><strong>Features:</strong>
+Rhythm game using jump physics and simple aesthetic.
+</li>
+
+<li><strong>Setting/Premise:</strong>
+None.
+</li>
+
+<li><strong>Story:</strong>
+None.
+</li>
+
+<li><strong>Target Audience:</strong>
+Everyone 10 and up who has interest in music and rhythm based games.
+</li>
+
+<li><strong>Play time:</strong>
+3-5 mins.
+</li>
+
+<li><strong>Strategies:</strong>
+Focus on the platforms.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Explosion: https://www.freesound.org/people/killkhan/sounds/150204/ 
+Music: 
+"Tread a Little Heavier" (DDRKirby(ISQ) / http://ocremix.org) 
+
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+
+</li>
+
+</ul>
+</div>
+</body>
+</html>
